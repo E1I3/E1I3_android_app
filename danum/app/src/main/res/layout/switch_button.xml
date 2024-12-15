@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/switchContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- 스위치 배경과 선택자 -->
+    <FrameLayout
+        android:id="@+id/switchLayout"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/switch_background"
+        android:padding="5dp">
+
+        <!-- 스위치 선택자 -->
+        <View
+            android:id="@+id/switchSelector"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start|center_vertical"
+            android:background="@drawable/switch_selector"
+            android:translationX="0dp"/>
+
+    </FrameLayout>
+
+    <!-- 스위치 텍스트 -->
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <!-- 판매자 텍스트 -->
+        <TextView
+            android:id="@+id/userTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용자"
+            android:fontFamily="@font/pretendard_semi_bold"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <!-- 사용자 텍스트 -->
+        <TextView
+            android:id="@+id/sellerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="판매자"
+            android:textColor="@color/text_gray"
+            android:fontFamily="@font/pretendard_semi_bold"
+            android:textSize="16sp"
+            android:layout_marginStart="60dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

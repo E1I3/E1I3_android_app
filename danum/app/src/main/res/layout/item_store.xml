@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/storeItemLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <!-- 가게 이미지 -->
+    <ImageView
+        android:id="@+id/storeImageView"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+        <TextView
+            android:id="@+id/storeNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가게 이름"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/storeImageView"
+            app:layout_constraintTop_toTopOf="@id/storeImageView"
+            app:layout_constraintEnd_toStartOf="@id/actionButton"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="8dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <!-- 가게 주소 -->
+        <TextView
+            android:id="@+id/storeAddressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가게 주소"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            app:layout_constraintStart_toEndOf="@id/storeImageView"
+            app:layout_constraintTop_toBottomOf="@id/storeNameTextView"
+            app:layout_constraintEnd_toStartOf="@id/actionButton"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- 거래/나눔 버튼 -->
+    <Button
+        android:id="@+id/actionButton"
+        android:layout_width="70dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:text="거래"
+        android:background="@drawable/button_transaction"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/pretendard_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>
